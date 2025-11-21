@@ -43,12 +43,12 @@ export default function Facilities() {
       id="facilities"
       ref={sectionRef}
       style={{ opacity }}
-      className="relative min-h-screen bg-primary-white text-primary-black py-32 px-6 lg:px-12"
+      className="relative min-h-screen bg-primary-white text-primary-black py-16 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-12"
     >
       {/* Vertical SOUL text on left side */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 lg:-translate-x-0 lg:left-6 pointer-events-none z-0">
+      <div className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 lg:left-6 pointer-events-none z-0">
         <div
-          className="text-[120px] lg:text-[180px] font-heading font-black tracking-ultra-wide opacity-10"
+          className="text-[100px] md:text-[120px] lg:text-[180px] font-heading font-black tracking-ultra-wide opacity-10"
           style={{
             writingMode: "vertical-rl",
             textOrientation: "mixed",
@@ -70,16 +70,16 @@ export default function Facilities() {
           <div className="text-sm font-mono text-primary-black/60 mb-4">
             MICROSPOT
           </div>
-          <h2 className="text-5xl md:text-7xl font-heading font-black tracking-ultra-wide mb-8">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black tracking-ultra-wide mb-6 md:mb-8">
             FACILITIES
           </h2>
-          <p className="text-lg max-w-2xl mx-auto text-primary-black/80">
+          <p className="text-base md:text-lg max-w-2xl mx-auto text-primary-black/80 px-4 md:px-0">
             Every square foot is purpose-built. Every piece of equipment is
             precision-engineered. This is where science meets sweat.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {facilities.map((facility, index) => (
             <motion.div
               key={facility.title}
@@ -93,7 +93,7 @@ export default function Facilities() {
               className="group cursor-pointer"
               style={{ willChange: "transform, opacity" }}
             >
-              <div className="relative h-96 mb-6 overflow-hidden">
+              <div className="relative h-64 sm:h-80 md:h-96 mb-4 md:mb-6 overflow-hidden">
                 <div
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat grayscale group-hover:grayscale-0 transition-all duration-1000 ease-out scale-100 group-hover:scale-110"
                   style={{
@@ -103,10 +103,10 @@ export default function Facilities() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-black/60 via-transparent to-transparent" />
               </div>
-              <h3 className="text-2xl font-heading font-black tracking-ultra-wide mb-3">
+              <h3 className="text-xl md:text-2xl font-heading font-black tracking-ultra-wide mb-2 md:mb-3">
                 {facility.title}
               </h3>
-              <p className="text-primary-black/70 leading-relaxed">
+              <p className="text-sm md:text-base text-primary-black/70 leading-relaxed">
                 {facility.description}
               </p>
             </motion.div>

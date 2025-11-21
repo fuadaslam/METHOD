@@ -34,13 +34,13 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
-        <div className="flex items-center justify-center gap-3 md:gap-4 lg:gap-6 mb-4 flex-wrap md:flex-nowrap">
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto">
+        <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 mb-4 flex-wrap md:flex-nowrap">
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] font-heading font-black tracking-ultra-wide text-accent-lime whitespace-nowrap"
+            className="text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] font-heading font-black tracking-ultra-wide text-accent-lime whitespace-nowrap"
             style={{ willChange: "transform, opacity" }}
           >
             METHOD
@@ -72,7 +72,7 @@ export default function Hero() {
             delay: 0.3,
             ease: [0.25, 0.46, 0.45, 0.94],
           }}
-          className="text-accent-lime text-xl md:text-2xl lg:text-3xl font-body font-normal tracking-wide"
+          className="text-accent-lime text-lg sm:text-xl md:text-2xl lg:text-3xl font-body font-normal tracking-wide"
           style={{ willChange: "transform, opacity" }}
         >
           BY BINSHAD
@@ -86,13 +86,13 @@ export default function Hero() {
             delay: 0.5,
             ease: [0.25, 0.46, 0.45, 0.94],
           }}
-          className="mt-12"
+          className="mt-8 sm:mt-12"
           style={{ willChange: "transform, opacity" }}
         >
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-12 py-4 bg-accent-lime text-primary-black font-heading font-black tracking-ultra-wide text-sm uppercase hover:bg-accent-lime-dark transition-colors duration-500 ease-out"
+            className="px-8 sm:px-12 py-3 sm:py-4 bg-accent-lime text-primary-black font-heading font-black tracking-ultra-wide text-xs sm:text-sm uppercase hover:bg-accent-lime-dark transition-colors duration-500 ease-out"
           >
             BEGIN YOUR JOURNEY
           </motion.button>
@@ -104,7 +104,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-8 z-10"
+        className="absolute bottom-4 left-4 sm:bottom-8 sm:left-8 z-10"
       >
         <div className="w-8 h-8 rounded-full bg-primary-white/10 border border-primary-white/20 flex items-center justify-center">
           <svg
@@ -135,13 +135,13 @@ export default function Hero() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2">
           <div className="flex whitespace-nowrap scroll-text-header">
-            <span className="text-[8rem] md:text-[12rem] lg:text-[16rem] font-heading font-black tracking-ultra-wide text-primary-white/5 mr-32">
+            <span className="text-[4rem] sm:text-[6rem] md:text-[12rem] lg:text-[16rem] font-heading font-black tracking-ultra-wide text-primary-white/5 mr-8 sm:mr-16 md:mr-32">
               MIND&nbsp;&nbsp;&nbsp;&nbsp;BODY&nbsp;&nbsp;&nbsp;&nbsp;SOUL&nbsp;&nbsp;&nbsp;&nbsp;
             </span>
-            <span className="text-[8rem] md:text-[12rem] lg:text-[16rem] font-heading font-black tracking-ultra-wide text-primary-white/5 mr-32">
+            <span className="text-[4rem] sm:text-[6rem] md:text-[12rem] lg:text-[16rem] font-heading font-black tracking-ultra-wide text-primary-white/5 mr-8 sm:mr-16 md:mr-32">
               MIND&nbsp;&nbsp;&nbsp;&nbsp;BODY&nbsp;&nbsp;&nbsp;&nbsp;SOUL&nbsp;&nbsp;&nbsp;&nbsp;
             </span>
-            <span className="text-[8rem] md:text-[12rem] lg:text-[16rem] font-heading font-black tracking-ultra-wide text-primary-white/5">
+            <span className="text-[4rem] sm:text-[6rem] md:text-[12rem] lg:text-[16rem] font-heading font-black tracking-ultra-wide text-primary-white/5">
               MIND&nbsp;&nbsp;&nbsp;&nbsp;BODY&nbsp;&nbsp;&nbsp;&nbsp;SOUL&nbsp;&nbsp;&nbsp;&nbsp;
             </span>
           </div>
@@ -153,7 +153,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-12 right-1/2 transform translate-x-1/2 z-10"
+        className="absolute bottom-6 sm:bottom-12 right-1/2 transform translate-x-1/2 z-10"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}

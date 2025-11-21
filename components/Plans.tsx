@@ -73,7 +73,7 @@ export default function Plans() {
     <motion.section
       id="plans"
       ref={sectionRef}
-      className="relative min-h-screen bg-primary-black text-primary-white py-32 px-6 lg:px-12"
+      className="relative min-h-screen bg-primary-black text-primary-white py-16 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-12"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -81,22 +81,22 @@ export default function Plans() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-16 md:mb-20"
         >
-          <div className="text-sm font-mono text-primary-white/60 mb-4">
+          <div className="text-xs sm:text-sm font-mono text-primary-white/60 mb-3 sm:mb-4">
             MEMBERSHIP
           </div>
-          <h2 className="text-5xl md:text-7xl font-heading font-black tracking-ultra-wide mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black tracking-ultra-wide mb-4 sm:mb-6">
             CHOOSE YOUR PLAN
           </h2>
-          <p className="text-lg leading-relaxed text-primary-white/80 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg leading-relaxed text-primary-white/80 max-w-2xl mx-auto px-4 sm:px-0">
             Transform your potential into performance. Select the membership
             tier that aligns with your commitment to excellence.
           </p>
         </motion.div>
 
         {/* Plans Grid */}
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-16">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 mb-12 sm:mb-16">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
@@ -111,49 +111,49 @@ export default function Plans() {
                 plan.isPopular
                   ? "border-2 border-accent-lime bg-primary-black"
                   : "border border-primary-white/20 bg-primary-black/50"
-              } p-8 lg:p-10 hover:border-accent-lime transition-all duration-500 ease-out`}
+              } p-6 sm:p-8 lg:p-10 hover:border-accent-lime transition-all duration-500 ease-out`}
               style={{ willChange: "transform, opacity" }}
             >
               {/* Popular Badge */}
               {plan.isPopular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-accent-lime text-primary-black px-4 py-1 text-xs font-heading font-black tracking-ultra-wide">
+                <div className="absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-accent-lime text-primary-black px-3 sm:px-4 py-1 text-xs font-heading font-black tracking-ultra-wide">
                     MOST POPULAR
                   </div>
                 </div>
               )}
 
               {/* Plan Name */}
-              <div className="mb-6">
-                <h3 className="text-2xl md:text-3xl font-heading font-black tracking-ultra-wide mb-2">
+              <div className="mb-4 sm:mb-6">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-heading font-black tracking-ultra-wide mb-2">
                   {plan.name}
                 </h3>
-                <p className="text-sm text-primary-white/60 leading-relaxed">
+                <p className="text-xs sm:text-sm text-primary-white/60 leading-relaxed">
                   {plan.description}
                 </p>
               </div>
 
               {/* Price */}
-              <div className="mb-8 pb-8 border-b border-primary-white/10">
+              <div className="mb-6 sm:mb-8 pb-6 sm:pb-8 border-b border-primary-white/10">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-5xl md:text-6xl font-heading font-black text-accent-lime">
+                  <span className="text-4xl sm:text-5xl md:text-6xl font-heading font-black text-accent-lime">
                     ₹{plan.price}
                   </span>
-                  <span className="text-sm font-mono text-primary-white/60 uppercase tracking-wide">
+                  <span className="text-xs sm:text-sm font-mono text-primary-white/60 uppercase tracking-wide">
                     /{plan.period}
                   </span>
                 </div>
               </div>
 
               {/* Features */}
-              <ul className="flex-1 space-y-4 mb-8">
+              <ul className="flex-1 space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                 {plan.features.map((feature, featureIndex) => (
                   <li
                     key={featureIndex}
                     className="flex items-start gap-3 text-primary-white/80"
                   >
                     <svg
-                      className="w-5 h-5 text-accent-lime flex-shrink-0 mt-0.5"
+                      className="w-4 h-4 sm:w-5 sm:h-5 text-accent-lime flex-shrink-0 mt-0.5"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -165,7 +165,7 @@ export default function Plans() {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span className="text-sm leading-relaxed">{feature}</span>
+                    <span className="text-xs sm:text-sm leading-relaxed">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -209,15 +209,15 @@ export default function Plans() {
         </motion.div>
         <div className="h-[30px]"></div>
         {/* Scrolling text "by binshad" */}
-        <div className="absolute bottom-0 left-0 right-0 mt-[10px] overflow-hidden pointer-events-none">
+                <div className="absolute bottom-0 left-0 right-0 mt-[10px] overflow-hidden pointer-events-none">
           <div className="flex whitespace-nowrap scroll-text-footer">
-            <span className="text-6xl md:text-8xl lg:text-[10rem] font-heading font-black tracking-ultra-wide text-primary-white/10 mr-16">
+            <span className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-heading font-black tracking-ultra-wide text-primary-white/10 mr-8 sm:mr-12 md:mr-16">
               BY BINSHAD&nbsp;&nbsp;&nbsp;&nbsp;
             </span>
-            <span className="text-6xl md:text-8xl lg:text-[10rem] font-heading font-black tracking-ultra-wide text-primary-white/10 mr-16">
+            <span className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-heading font-black tracking-ultra-wide text-primary-white/10 mr-8 sm:mr-12 md:mr-16">
               BY BINSHAD&nbsp;&nbsp;&nbsp;&nbsp;
             </span>
-            <span className="text-6xl md:text-8xl lg:text-[10rem] font-heading font-black tracking-ultra-wide text-primary-white/10">
+            <span className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-heading font-black tracking-ultra-wide text-primary-white/10">
               BY BINSHAD&nbsp;&nbsp;&nbsp;&nbsp;
             </span>
           </div>

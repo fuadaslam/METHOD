@@ -19,16 +19,16 @@ export default function Coaching() {
       id="coaching"
       ref={sectionRef}
       style={{ opacity }}
-      className="relative min-h-screen bg-primary-black text-primary-white py-32 px-6 lg:px-12"
+      className="relative min-h-screen bg-primary-black text-primary-white py-16 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-12"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           {/* Left: Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="relative h-[600px] lg:h-[800px] order-2 lg:order-1"
+            className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[800px] order-2 lg:order-1"
             style={{ willChange: "transform, opacity" }}
           >
             <div
@@ -54,26 +54,26 @@ export default function Coaching() {
             className="order-1 lg:order-2"
             style={{ willChange: "transform, opacity" }}
           >
-            <div className="text-sm font-mono text-primary-white/60 mb-4">
+            <div className="text-xs sm:text-sm font-mono text-primary-white/60 mb-3 sm:mb-4">
               M-PATROL
             </div>
-            <h2 className="text-5xl md:text-7xl font-heading font-black tracking-ultra-wide mb-8">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black tracking-ultra-wide mb-6 sm:mb-8">
               COACHING
             </h2>
-            <p className="text-lg leading-relaxed mb-6 text-primary-white/80">
+            <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6 text-primary-white/80">
               One-on-one attention. Personalized programming. Real-time
               adjustments. Our coaches are not just trainers—they're movement
               scientists, performance analysts, and your dedicated partners in
               transformation.
             </p>
-            <p className="text-lg leading-relaxed mb-8 text-primary-white/80">
+            <p className="text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 text-primary-white/80">
               Every session is a masterclass. Every rep is analyzed. Every
               detail matters. This is coaching elevated to an art form.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-accent-lime text-primary-black font-heading font-black tracking-ultra-wide text-xs uppercase hover:bg-accent-lime-dark transition-all duration-500 ease-out"
+              className="px-6 sm:px-8 py-2.5 sm:py-3 bg-accent-lime text-primary-black font-heading font-black tracking-ultra-wide text-xs uppercase hover:bg-accent-lime-dark transition-all duration-500 ease-out"
             >
               MEET THE TEAM
             </motion.button>
@@ -82,9 +82,9 @@ export default function Coaching() {
       </div>
 
       {/* Vertical BODY text on right side */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 lg:translate-x-0 lg:right-6 pointer-events-none z-0">
+      <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 lg:right-6 pointer-events-none z-0">
         <div
-          className="text-[120px] lg:text-[180px] font-heading font-black tracking-ultra-wide opacity-10"
+          className="text-[100px] md:text-[120px] lg:text-[180px] font-heading font-black tracking-ultra-wide opacity-10"
           style={{
             writingMode: "vertical-rl",
             textOrientation: "mixed",

@@ -18,10 +18,10 @@ export default function JoinUs() {
     <motion.section
       id="join-us"
       ref={sectionRef}
-      className="relative min-h-screen bg-primary-black text-primary-white py-32 px-6 lg:px-12"
+      className="relative min-h-screen bg-primary-black text-primary-white py-16 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-12"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           {/* Left: Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -29,17 +29,17 @@ export default function JoinUs() {
             transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
             style={{ willChange: "transform, opacity" }}
           >
-            <div className="text-sm font-mono text-primary-white/60 mb-4">
+            <div className="text-xs sm:text-sm font-mono text-primary-white/60 mb-3 sm:mb-4">
               CONTACT/JOBS
             </div>
-            <h2 className="text-5xl md:text-7xl font-heading font-black tracking-ultra-wide mb-8">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black tracking-ultra-wide mb-6 sm:mb-8">
               JOIN US
             </h2>
-            <p className="text-lg leading-relaxed mb-6 text-primary-white/80">
+            <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6 text-primary-white/80">
               Ready to transcend your limits? Membership is by application only.
               We're not looking for everyone—we're looking for the committed.
             </p>
-            <p className="text-lg leading-relaxed mb-8 text-primary-white/80">
+            <p className="text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 text-primary-white/80">
               If you're serious about transformation, if you understand that
               excellence is a process, not an outcome—we want to hear from you.
             </p>
@@ -62,7 +62,7 @@ export default function JoinUs() {
                 <input
                   type="text"
                   placeholder="NAME"
-                  className="w-full bg-transparent border-b-2 border-primary-white/30 py-4 text-primary-white placeholder-primary-white/50 font-heading tracking-ultra-wide text-sm uppercase focus:outline-none focus:border-accent-lime transition-colors duration-500 ease-out"
+                  className="w-full bg-transparent border-b-2 border-primary-white/30 py-3 sm:py-4 text-primary-white placeholder-primary-white/50 font-heading tracking-ultra-wide text-xs sm:text-sm uppercase focus:outline-none focus:border-accent-lime transition-colors duration-500 ease-out"
                 />
               </div>
               <div>
@@ -71,38 +71,38 @@ export default function JoinUs() {
                   placeholder="EMAIL"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-transparent border-b-2 border-primary-white/30 py-4 text-primary-white placeholder-primary-white/50 font-heading tracking-ultra-wide text-sm uppercase focus:outline-none focus:border-accent-lime transition-colors duration-500 ease-out"
+                  className="w-full bg-transparent border-b-2 border-primary-white/30 py-3 sm:py-4 text-primary-white placeholder-primary-white/50 font-heading tracking-ultra-wide text-xs sm:text-sm uppercase focus:outline-none focus:border-accent-lime transition-colors duration-500 ease-out"
                 />
               </div>
               <div>
                 <textarea
                   placeholder="MESSAGE"
-                  rows={6}
-                  className="w-full bg-transparent border-b-2 border-primary-white/30 py-4 text-primary-white placeholder-primary-white/50 font-heading tracking-ultra-wide text-sm uppercase focus:outline-none focus:border-accent-red transition-colors resize-none"
+                  rows={5}
+                  className="w-full bg-transparent border-b-2 border-primary-white/30 py-3 sm:py-4 text-primary-white placeholder-primary-white/50 font-heading tracking-ultra-wide text-xs sm:text-sm uppercase focus:outline-none focus:border-accent-lime transition-colors resize-none"
                 />
               </div>
               <motion.button
                 type="submit"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full px-8 py-4 bg-accent-lime text-primary-black font-heading font-black tracking-ultra-wide text-xs uppercase hover:bg-accent-lime-dark transition-all duration-500 ease-out"
+                className="w-full px-6 sm:px-8 py-3 sm:py-4 bg-accent-lime text-primary-black font-heading font-black tracking-ultra-wide text-xs uppercase hover:bg-accent-lime-dark transition-all duration-500 ease-out"
               >
                 SUBMIT APPLICATION
               </motion.button>
             </form>
 
-            <div className="pt-8 border-t border-primary-white/10">
-              <p className="text-sm text-primary-white/60 mb-4">
+            <div className="pt-6 sm:pt-8 border-t border-primary-white/10">
+              <p className="text-xs sm:text-sm text-primary-white/60 mb-3 sm:mb-4">
                 CAREER OPPORTUNITIES
               </p>
-              <p className="text-primary-white/80 mb-4">
+              <p className="text-sm sm:text-base text-primary-white/80 mb-4">
                 We're always looking for exceptional coaches, movement
                 specialists, and performance scientists.
               </p>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 border-2 border-primary-white/30 text-primary-white font-heading font-black tracking-ultra-wide text-xs uppercase hover:border-accent-lime hover:text-accent-lime transition-all duration-500 ease-out"
+                className="px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-primary-white/30 text-primary-white font-heading font-black tracking-ultra-wide text-xs uppercase hover:border-accent-lime hover:text-accent-lime transition-all duration-500 ease-out"
               >
                 VIEW OPENINGS
               </motion.button>

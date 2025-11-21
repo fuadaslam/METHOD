@@ -4,23 +4,23 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-primary-black text-primary-white py-16 px-6 lg:px-12 border-t border-primary-white/10">
+    <footer className="relative bg-primary-black text-primary-white py-12 sm:py-16 px-4 sm:px-6 lg:px-12 border-t border-primary-white/10">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-12 mb-8 sm:mb-12">
           <div>
-            <h3 className="text-2xl font-heading font-black tracking-ultra-wide mb-4">
+            <h3 className="text-xl sm:text-2xl font-heading font-black tracking-ultra-wide mb-3 sm:mb-4">
               METHORD
             </h3>
-            <p className="text-primary-white/60 text-sm">
+            <p className="text-primary-white/60 text-xs sm:text-sm">
               The Apex of Training
             </p>
           </div>
 
           <div>
-            <h4 className="font-heading font-black tracking-ultra-wide text-sm mb-4">
+            <h4 className="font-heading font-black tracking-ultra-wide text-xs sm:text-sm mb-3 sm:mb-4">
               NAVIGATE
             </h4>
-            <ul className="space-y-2 text-sm text-primary-white/60">
+            <ul className="space-y-2 text-xs sm:text-sm text-primary-white/60">
               <li>
                 <a
                   href="#methodology"
@@ -57,10 +57,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-heading font-black tracking-ultra-wide text-sm mb-4">
+            <h4 className="font-heading font-black tracking-ultra-wide text-xs sm:text-sm mb-3 sm:mb-4">
               CONNECT
             </h4>
-            <ul className="space-y-2 text-sm text-primary-white/60">
+            <ul className="space-y-2 text-xs sm:text-sm text-primary-white/60">
               <li>
                 <a
                   href="#"
@@ -89,7 +89,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-primary-white/10 text-center text-sm text-primary-white/40 relative">
+        <div className="pt-6 sm:pt-8 border-t border-primary-white/10 text-center text-xs sm:text-sm text-primary-white/40 relative">
           <p>
             © {new Date().getFullYear()} Methord by Binshad. All rights
             reserved.

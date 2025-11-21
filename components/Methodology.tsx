@@ -20,12 +20,12 @@ export default function Methodology() {
       id="methodology"
       ref={sectionRef}
       style={{ opacity, y }}
-      className="relative min-h-screen bg-primary-white text-primary-black py-32 px-6 lg:px-12"
+      className="relative min-h-screen bg-primary-white text-primary-black py-16 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-12"
     >
       {/* Vertical MIND text on left side */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 lg:-translate-x-0 lg:left-6 pointer-events-none z-0">
+      <div className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 lg:left-6 pointer-events-none z-0">
         <div
-          className="text-[120px] lg:text-[180px] font-heading font-black tracking-ultra-wide opacity-10"
+          className="text-[100px] md:text-[120px] lg:text-[180px] font-heading font-black tracking-ultra-wide opacity-10"
           style={{
             writingMode: "vertical-rl",
             textOrientation: "mixed",
@@ -36,7 +36,7 @@ export default function Methodology() {
         </div>
       </div>
       <div className="max-w-7xl mx-auto overflow-hidden relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           {/* Left: Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -45,18 +45,18 @@ export default function Methodology() {
             style={{ willChange: "transform, opacity" }}
             className="overflow-hidden"
           >
-            <div className="text-sm font-mono text-primary-black/60 mb-4">
+            <div className="text-xs sm:text-sm font-mono text-primary-black/60 mb-3 sm:mb-4">
               M-PLATFORM
             </div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black tracking-ultra-wide mb-8 break-words">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black tracking-ultra-wide mb-6 sm:mb-8 break-words">
               METHODOLOGY
             </h2>
-            <p className="text-lg leading-relaxed mb-6 text-primary-black/80">
+            <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6 text-primary-black/80">
               Our proprietary training system combines cutting-edge exercise
               science with precision biomechanics. Every movement is analyzed,
               optimized, and executed with surgical precision.
             </p>
-            <p className="text-lg leading-relaxed mb-8 text-primary-black/80">
+            <p className="text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 text-primary-black/80">
               We don't follow trends—we set them. Our methodology is built on
               decades of research, refined through thousands of hours of
               elite-level training, and continuously evolved through data-driven
@@ -65,7 +65,7 @@ export default function Methodology() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 border-2 border-primary-black text-primary-black font-heading font-black tracking-ultra-wide text-xs uppercase hover:bg-primary-black hover:text-primary-white transition-all duration-500 ease-out"
+              className="px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-primary-black text-primary-black font-heading font-black tracking-ultra-wide text-xs uppercase hover:bg-primary-black hover:text-primary-white transition-all duration-500 ease-out"
             >
               EXPLORE THE SYSTEM
             </motion.button>
@@ -80,7 +80,7 @@ export default function Methodology() {
               delay: 0.15,
               ease: [0.25, 0.46, 0.45, 0.94],
             }}
-            className="relative h-[600px] lg:h-[800px]"
+            className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[800px]"
             style={{ willChange: "transform, opacity" }}
           >
             <div

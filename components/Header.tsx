@@ -74,13 +74,13 @@ export default function Header() {
         }`}
         style={{ willChange: "transform" }}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-4 sm:py-6 relative z-10">
           <div className="flex items-center justify-between">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-2xl font-heading font-black tracking-ultra-wide text-accent-lime"
+              className="text-xl sm:text-2xl font-heading font-black tracking-ultra-wide text-accent-lime"
             >
               METHOD
             </motion.div>
@@ -132,7 +132,7 @@ export default function Header() {
                   menuRef.current.scrollTop = 0;
                 }
               }}
-              className="fixed top-0 right-0 w-full md:w-1/2 h-full bg-primary-black z-[70] overflow-y-auto shadow-2xl"
+              className="fixed top-0 right-0 w-full sm:w-4/5 md:w-1/2 lg:w-2/5 h-full bg-primary-black z-[70] overflow-y-auto shadow-2xl"
             >
               {/* Close button - top right */}
               <motion.button
@@ -141,7 +141,7 @@ export default function Header() {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.4, delay: 0.1 }}
                 onClick={() => setIsMenuOpen(false)}
-                className="absolute top-8 right-8 z-[80] text-6xl font-light text-primary-white hover:text-accent-lime transition-colors duration-500 ease-out cursor-pointer"
+                className="absolute top-4 right-4 sm:top-8 sm:right-8 z-[80] text-4xl sm:text-6xl font-light text-primary-white hover:text-accent-lime transition-colors duration-500 ease-out cursor-pointer"
                 aria-label="Close menu"
                 style={{ willChange: "transform, opacity" }}
               >
@@ -149,8 +149,8 @@ export default function Header() {
               </motion.button>
 
               {/* Navigation items */}
-              <div className="relative z-10 flex flex-col px-6 md:px-12 py-20 pt-32">
-                <ul className="space-y-4 md:space-y-5 lg:space-y-6 w-full max-w-3xl flex-shrink-0">
+              <div className="relative z-10 flex flex-col px-4 sm:px-6 md:px-12 py-16 sm:py-20 pt-20 sm:pt-32">
+                <ul className="space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-6 w-full max-w-3xl flex-shrink-0">
                   {navItems.map((item, index) => (
                     <motion.li
                       key={item.href}
@@ -166,11 +166,11 @@ export default function Header() {
                     >
                       <button
                         onClick={() => handleNavClick(item.href)}
-                        className="group text-left flex items-center gap-3 md:gap-4 lg:gap-5 w-full py-2"
+                        className="group text-left flex items-center gap-2 sm:gap-3 md:gap-4 lg:gap-5 w-full py-1 sm:py-2"
                       >
                         {/* Number */}
                         <span
-                          className={`text-sm md:text-base font-mono tracking-wider flex-shrink-0 min-w-[2rem] md:min-w-[2.5rem] ${
+                          className={`text-xs sm:text-sm md:text-base font-mono tracking-wider flex-shrink-0 min-w-[1.5rem] sm:min-w-[2rem] md:min-w-[2.5rem] ${
                             item.isHighlighted
                               ? "text-accent-lime"
                               : "text-primary-white/60"
@@ -183,8 +183,8 @@ export default function Header() {
                         <span
                           className={`font-heading font-black tracking-ultra-wide menu-item-label ${
                             item.isHighlighted
-                              ? "text-accent-lime text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
-                              : "text-primary-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
+                              ? "text-accent-lime text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
+                              : "text-primary-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl"
                           }`}
                           style={
                             !item.isHighlighted
