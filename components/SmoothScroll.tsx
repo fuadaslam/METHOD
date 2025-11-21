@@ -16,8 +16,6 @@ export default function SmoothScroll({ children }: SmoothScrollProps) {
       gestureOrientation: 'vertical',
       smoothWheel: true,
       wheelMultiplier: 0.8,
-      smoothTouch: true,
-      touchMultiplier: 1.5,
       infinite: false,
       lerp: 0.1, // Lower lerp for smoother interpolation
     })
