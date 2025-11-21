@@ -11,7 +11,7 @@ export default function JoinUs() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    conSOUL.log("Email submitted:", email);
+    console.log("Email submitted:", email);
   };
 
   return (
