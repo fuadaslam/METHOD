@@ -46,17 +46,17 @@ export default function Facilities() {
       className="relative min-h-screen bg-primary-white text-primary-black py-32 px-6 lg:px-12"
     >
       {/* Vertical SOUL text on left side */}
-      <div
-        className="absolute left-6 lg:left-12 top-1/2 pointer-events-none"
-        style={{
-          writingMode: "vertical-rl",
-          transform: "translateY(-50%) rotate(180deg)",
-          opacity: 0.1,
-        }}
-      >
-        <span className="text-8xl md:text-9xl font-heading font-black tracking-ultra-wide text-primary-black">
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 lg:-translate-x-0 lg:left-6 pointer-events-none z-0">
+        <div
+          className="text-[120px] lg:text-[180px] font-heading font-black tracking-ultra-wide opacity-10"
+          style={{
+            writingMode: "vertical-rl",
+            textOrientation: "mixed",
+            transform: "rotate(180deg)",
+          }}
+        >
           SOUL
-        </span>
+        </div>
       </div>
 
       <div className="max-w-7xl mx-auto">

@@ -82,16 +82,17 @@ export default function Coaching() {
       </div>
 
       {/* Vertical BODY text on right side */}
-      <div
-        className="absolute right-0 lg:right-0 top-1/2 pointer-events-none"
-        style={{
-          transform: "translateY(-50%) rotate(-90deg)",
-          opacity: 0.1,
-        }}
-      >
-        <h3 className="text-8xl md:text-9xl font-heading font-black tracking-ultra-wide whitespace-nowrap">
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 lg:translate-x-0 lg:right-6 pointer-events-none z-0">
+        <div
+          className="text-[120px] lg:text-[180px] font-heading font-black tracking-ultra-wide opacity-10"
+          style={{
+            writingMode: "vertical-rl",
+            textOrientation: "mixed",
+            transform: "rotate(180deg)",
+          }}
+        >
           BODY
-        </h3>
+        </div>
       </div>
     </motion.section>
   );
