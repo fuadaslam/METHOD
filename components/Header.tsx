@@ -47,8 +47,8 @@ export default function Header() {
     { label: "Studio", href: "#studio", number: "05" },
     { label: "Plans", href: "#plans", number: "06" },
     { label: "Contact Us", href: "#join-us", number: "07" },
-    { label: "Jobs", href: "#jobs", number: "08" },
-    { label: "Investors", href: "#investors", number: "09" },
+    // { label: "Jobs", href: "#jobs", number: "08" },
+    // { label: "Investors", href: "#investors", number: "09" },
   ];
 
   const handleNavClick = (href: string) => {
