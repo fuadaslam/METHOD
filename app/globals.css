@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-black: #0A0A0A;
+  --primary-white: #FAFAFA;
+  --accent-lime: #A8FF00;
+  --accent-lime-dark: #7FCC00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto; /* Disable native smooth scroll, Lenis handles it */
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none; /* Prevent bounce scrolling */
+}
+
+/* Smooth scroll wrapper */
+.smooth-scroll-wrapper {
+  will-change: transform;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* Smooth scroll container */
+.smooth-scroll {
+  overflow-x: hidden;
+}
+
+.smooth-scroll-wrapper {
+  will-change: transform;
+}
+
+/* Performance optimizations */
+* {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Optimize animations */
+[data-framer-component],
+[data-framer-name] {
+  will-change: transform, opacity;
+}
+
+/* GPU acceleration for smooth transforms */
+.motion-safe\:transform-gpu {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-lime);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-lime-dark);
+}
+
+/* Utility classes */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Animation utilities */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Text outline utility */
+.text-outline {
+  -webkit-text-stroke: 2px white;
+  -webkit-text-fill-color: transparent;
+  text-stroke: 2px white;
+  color: transparent;
+}
+
+/* Menu item hover effect */
+.menu-item-label {
+  transition: all 0.5s ease-out;
+  transform-origin: left center;
+  display: inline-block;
+  will-change: transform, -webkit-text-stroke, -webkit-text-fill-color, color;
+}
+
+/* Scrolling text animations */
+@keyframes scrollHeader {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+@keyframes scrollFooter {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.scroll-text-header {
+  animation: scrollHeader 20s linear infinite;
+}
+
+.scroll-text-footer {
+  animation: scrollFooter 15s linear infinite;
+}
+
