@@ -61,7 +61,7 @@ export default function Plans() {
 
   const handleSelectPlan = (planName: string) => {
     // Handle plan selection - can integrate with payment system
-    console.log(`Selected plan: ${planName}`);
+    conSOUL.log(`Selected plan: ${planName}`);
     // Scroll to join-us form
     const element = document.querySelector("#join-us");
     if (element) {

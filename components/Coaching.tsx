@@ -1,18 +1,18 @@
-'use client'
+"use client";
 
-import { useRef } from 'react'
-import { motion, useInView, useScroll, useTransform } from 'framer-motion'
+import { useRef } from "react";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 
 export default function Coaching() {
-  const sectionRef = useRef<HTMLDivElement>(null)
-  const isInView = useInView(sectionRef, { once: true, amount: 0.3 })
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ['start end', 'end start'],
-  })
+    offset: ["start end", "end start"],
+  });
 
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0])
+  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
   return (
     <motion.section
@@ -29,12 +29,12 @@ export default function Coaching() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="relative h-[600px] lg:h-[800px] order-2 lg:order-1"
-            style={{ willChange: 'transform, opacity' }}
+            style={{ willChange: "transform, opacity" }}
           >
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat grayscale hover:grayscale-0 transition-all duration-1000 ease-out"
               style={{
-                willChange: 'filter',
+                willChange: "filter",
                 backgroundImage:
                   "url('https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=1200&q=80')",
               }}
@@ -46,9 +46,13 @@ export default function Coaching() {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 1, delay: 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{
+              duration: 1,
+              delay: 0.15,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
             className="order-1 lg:order-2"
-            style={{ willChange: 'transform, opacity' }}
+            style={{ willChange: "transform, opacity" }}
           >
             <div className="text-sm font-mono text-primary-white/60 mb-4">
               M-PATROL
@@ -76,7 +80,19 @@ export default function Coaching() {
           </motion.div>
         </div>
       </div>
-    </motion.section>
-  )
-}
 
+      {/* Vertical BODY text on right side */}
+      <div
+        className="absolute right-0 lg:right-0 top-1/2 pointer-events-none"
+        style={{
+          transform: "translateY(-50%) rotate(-90deg)",
+          opacity: 0.1,
+        }}
+      >
+        <h3 className="text-8xl md:text-9xl font-heading font-black tracking-ultra-wide whitespace-nowrap">
+          BODY
+        </h3>
+      </div>
+    </motion.section>
+  );
+}

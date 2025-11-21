@@ -1,19 +1,19 @@
-'use client'
+"use client";
 
-import { useRef, useEffect } from 'react'
-import { motion, useInView, useScroll, useTransform } from 'framer-motion'
+import { useRef, useEffect } from "react";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 
 export default function Methodology() {
-  const sectionRef = useRef<HTMLDivElement>(null)
-  const isInView = useInView(sectionRef, { once: true, amount: 0.3 })
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ['start end', 'end start'],
-  })
+    offset: ["start end", "end start"],
+  });
 
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0])
-  const y = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [50, 0, 0, -50])
+  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+  const y = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [50, 0, 0, -50]);
 
   return (
     <motion.section
@@ -22,14 +22,27 @@ export default function Methodology() {
       style={{ opacity, y }}
       className="relative min-h-screen bg-primary-white text-primary-black py-32 px-6 lg:px-12"
     >
-      <div className="max-w-7xl mx-auto overflow-hidden">
+      {/* Vertical MIND text on left side */}
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 lg:-translate-x-0 lg:left-6 pointer-events-none z-0">
+        <div
+          className="text-[120px] lg:text-[180px] font-heading font-black tracking-ultra-wide opacity-10"
+          style={{
+            writingMode: "vertical-rl",
+            textOrientation: "mixed",
+            transform: "rotate(180deg)",
+          }}
+        >
+          MIND
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto overflow-hidden relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
-            style={{ willChange: 'transform, opacity' }}
+            style={{ willChange: "transform, opacity" }}
             className="overflow-hidden"
           >
             <div className="text-sm font-mono text-primary-black/60 mb-4">
@@ -62,14 +75,18 @@ export default function Methodology() {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 1, delay: 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{
+              duration: 1,
+              delay: 0.15,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
             className="relative h-[600px] lg:h-[800px]"
-            style={{ willChange: 'transform, opacity' }}
+            style={{ willChange: "transform, opacity" }}
           >
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat grayscale hover:grayscale-0 transition-all duration-1000 ease-out"
               style={{
-                willChange: 'filter',
+                willChange: "filter",
                 backgroundImage:
                   "url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80')",
               }}
@@ -79,6 +96,5 @@ export default function Methodology() {
         </div>
       </div>
     </motion.section>
-  )
+  );
 }
-

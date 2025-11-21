@@ -44,10 +44,11 @@ export default function Header() {
     { label: "Methodology", href: "#methodology", number: "02" },
     { label: "Coaching", href: "#coaching", number: "03" },
     { label: "Facilities", href: "#facilities", number: "04" },
-    { label: "Plans", href: "#plans", number: "05" },
-    { label: "Contact Us", href: "#join-us", number: "06" },
-    { label: "Jobs", href: "#jobs", number: "07" },
-    { label: "Investors", href: "#investors", number: "08" },
+    { label: "Studio", href: "#studio", number: "05" },
+    { label: "Plans", href: "#plans", number: "06" },
+    { label: "Contact Us", href: "#join-us", number: "07" },
+    { label: "Jobs", href: "#jobs", number: "08" },
+    { label: "Investors", href: "#investors", number: "09" },
   ];
 
   const handleNavClick = (href: string) => {

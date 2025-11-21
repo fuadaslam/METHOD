@@ -136,13 +136,13 @@ export default function Hero() {
         <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2">
           <div className="flex whitespace-nowrap scroll-text-header">
             <span className="text-[8rem] md:text-[12rem] lg:text-[16rem] font-heading font-black tracking-ultra-wide text-primary-white/5 mr-32">
-              MIND&nbsp;&nbsp;&nbsp;&nbsp;BODY&nbsp;&nbsp;&nbsp;&nbsp;SOLE&nbsp;&nbsp;&nbsp;&nbsp;
+              MIND&nbsp;&nbsp;&nbsp;&nbsp;BODY&nbsp;&nbsp;&nbsp;&nbsp;SOUL&nbsp;&nbsp;&nbsp;&nbsp;
             </span>
             <span className="text-[8rem] md:text-[12rem] lg:text-[16rem] font-heading font-black tracking-ultra-wide text-primary-white/5 mr-32">
-              MIND&nbsp;&nbsp;&nbsp;&nbsp;BODY&nbsp;&nbsp;&nbsp;&nbsp;SOLE&nbsp;&nbsp;&nbsp;&nbsp;
+              MIND&nbsp;&nbsp;&nbsp;&nbsp;BODY&nbsp;&nbsp;&nbsp;&nbsp;SOUL&nbsp;&nbsp;&nbsp;&nbsp;
             </span>
             <span className="text-[8rem] md:text-[12rem] lg:text-[16rem] font-heading font-black tracking-ultra-wide text-primary-white/5">
-              MIND&nbsp;&nbsp;&nbsp;&nbsp;BODY&nbsp;&nbsp;&nbsp;&nbsp;SOLE&nbsp;&nbsp;&nbsp;&nbsp;
+              MIND&nbsp;&nbsp;&nbsp;&nbsp;BODY&nbsp;&nbsp;&nbsp;&nbsp;SOUL&nbsp;&nbsp;&nbsp;&nbsp;
             </span>
           </div>
         </div>
