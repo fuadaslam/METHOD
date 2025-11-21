@@ -33,8 +33,8 @@ export default function Coaching() {
           >
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat grayscale hover:grayscale-0 transition-all duration-1000 ease-out"
-              style={{ willChange: 'filter' }}
               style={{
+                willChange: 'filter',
                 backgroundImage:
                   "url('https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=1200&q=80')",
               }}
