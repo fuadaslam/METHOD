@@ -112,7 +112,6 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
               className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[60]"
             />
-
             {/* Half-screen menu */}
             <motion.nav
               ref={menuRef}
