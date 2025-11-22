@@ -41,7 +41,7 @@ export default function Header() {
 
   const navItems = [
     { label: "Home", href: "#", number: "01", isHighlighted: true },
-    { label: "Methodology", href: "#methodology", number: "02" },
+    { label: "Method", href: "#methodology", number: "02" },
     { label: "Coaching", href: "#coaching", number: "03" },
     { label: "Facilities", href: "#facilities", number: "04" },
     { label: "Studio", href: "#studio", number: "05" },

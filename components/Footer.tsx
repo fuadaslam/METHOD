@@ -26,7 +26,7 @@ export default function Footer() {
                   href="#methodology"
                   className="hover:text-accent-lime transition-colors duration-500 ease-out"
                 >
-                  Methodology
+                  Method
                 </a>
               </li>
               <li>

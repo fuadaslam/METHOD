@@ -49,7 +49,7 @@ export default function Methodology() {
               M-PLATFORM
             </div>
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black tracking-ultra-wide mb-6 sm:mb-8 break-words">
-              METHODOLOGY
+              METHOD
             </h2>
             <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6 text-primary-black/80">
               Our proprietary training system combines cutting-edge exercise
@@ -57,10 +57,9 @@ export default function Methodology() {
               optimized, and executed with surgical precision.
             </p>
             <p className="text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 text-primary-black/80">
-              We don't follow trends—we set them. Our methodology is built on
-              decades of research, refined through thousands of hours of
-              elite-level training, and continuously evolved through data-driven
-              insights.
+              We don't follow trends—we set them. Our method is built on decades
+              of research, refined through thousands of hours of elite-level
+              training, and continuously evolved through data-driven insights.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}

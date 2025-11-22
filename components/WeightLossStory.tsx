@@ -42,7 +42,7 @@ export default function WeightLossStory() {
               <p className="text-base sm:text-lg leading-relaxed text-primary-black/80">
                 "I had tried everything—countless diets, gym memberships, and
                 quick fixes. Nothing worked until I found METHOD. The
-                personalized approach and scientific methodology changed
+                personalized approach and scientific method changed
                 everything."
               </p>
               <p className="text-base sm:text-lg leading-relaxed text-primary-black/80">
