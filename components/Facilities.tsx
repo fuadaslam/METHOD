@@ -46,7 +46,7 @@ export default function Facilities() {
       className="relative min-h-screen bg-primary-white text-primary-black py-16 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-12"
     >
       {/* Vertical SOUL text on left side */}
-      <div className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 lg:left-6 pointer-events-none z-0">
+      <div className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 lg:left-0 pointer-events-none z-0">
         <div
           className="text-[100px] md:text-[120px] lg:text-[180px] font-heading font-black tracking-ultra-wide opacity-10"
           style={{

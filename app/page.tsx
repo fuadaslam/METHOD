@@ -9,7 +9,8 @@ import Facilities from '@/components/Facilities'
 import Studio from '@/components/Studio'
 import WeightLossStory from '@/components/WeightLossStory'
 import Plans from '@/components/Plans'
-import JoinUs from '@/components/JoinUs'
+import ContactUs from '@/components/ContactUs'
+import Newsletter from '@/components/Newsletter'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -23,7 +24,8 @@ export default function Home() {
       <Studio />
       <WeightLossStory />
       <Plans />
-      <JoinUs />
+      <ContactUs />
+      <Newsletter />
       <Footer />
     </main>
   )

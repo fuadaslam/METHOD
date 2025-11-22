@@ -165,7 +165,9 @@ export default function Plans() {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span className="text-xs sm:text-sm leading-relaxed">{feature}</span>
+                    <span className="text-xs sm:text-sm leading-relaxed">
+                      {feature}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -208,16 +210,40 @@ export default function Plans() {
           </p>
         </motion.div>
         <div className="h-[30px]"></div>
-        {/* Scrolling text "by binshad" */}
-                <div className="absolute bottom-0 left-0 right-0 mt-[10px] overflow-hidden pointer-events-none">
-          <div className="flex whitespace-nowrap scroll-text-footer">
-            <span className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-heading font-black tracking-ultra-wide text-primary-white/10 mr-8 sm:mr-12 md:mr-16">
+        {/* Scrolling text "by binshad" - vertical on left side, rotated 180deg, reading bottom to top */}
+        <div
+          className="absolute left-0 top-0 bottom-0 overflow-hidden pointer-events-none"
+          style={{ width: "fit-content" }}
+        >
+          <div className="flex flex-col scroll-text-left h-full">
+            <span
+              className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-heading font-black tracking-ultra-wide text-primary-white/10 mb-8 sm:mb-12 md:mb-16 whitespace-nowrap inline-block"
+              style={{
+                writingMode: "vertical-rl",
+                textOrientation: "mixed",
+                transform: "rotate(180deg)",
+              }}
+            >
               BY BINSHAD&nbsp;&nbsp;&nbsp;&nbsp;
             </span>
-            <span className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-heading font-black tracking-ultra-wide text-primary-white/10 mr-8 sm:mr-12 md:mr-16">
+            <span
+              className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-heading font-black tracking-ultra-wide text-primary-white/10 mb-8 sm:mb-12 md:mb-16 whitespace-nowrap inline-block"
+              style={{
+                writingMode: "vertical-rl",
+                textOrientation: "mixed",
+                transform: "rotate(180deg)",
+              }}
+            >
               BY BINSHAD&nbsp;&nbsp;&nbsp;&nbsp;
             </span>
-            <span className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-heading font-black tracking-ultra-wide text-primary-white/10">
+            <span
+              className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-heading font-black tracking-ultra-wide text-primary-white/10 whitespace-nowrap inline-block"
+              style={{
+                writingMode: "vertical-rl",
+                textOrientation: "mixed",
+                transform: "rotate(180deg)",
+              }}
+            >
               BY BINSHAD&nbsp;&nbsp;&nbsp;&nbsp;
             </span>
           </div>

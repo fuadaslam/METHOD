@@ -46,7 +46,7 @@ export default function Studio() {
       id="studio"
       ref={sectionRef}
       style={{ opacity }}
-      className="relative min-h-screen bg-primary-white text-primary-black py-16 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-12"
+      className="relative min-h-screen bg-black text-white py-16 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-12"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -56,13 +56,13 @@ export default function Studio() {
           className="text-center mb-12 sm:mb-16 md:mb-20"
           style={{ willChange: 'transform, opacity' }}
         >
-          <div className="text-xs sm:text-sm font-mono text-primary-black/60 mb-3 sm:mb-4">
+          <div className="text-xs sm:text-sm font-mono text-white/60 mb-3 sm:mb-4">
             STUDIO
           </div>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black tracking-ultra-wide mb-6 sm:mb-8">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black tracking-ultra-wide mb-6 sm:mb-8 text-white">
             OUR SPACE
           </h2>
-          <p className="text-base sm:text-lg max-w-2xl mx-auto text-primary-black/80 px-4 sm:px-0">
+          <p className="text-base sm:text-lg max-w-2xl mx-auto text-white/80 px-4 sm:px-0">
             Step inside our world-class facility. Every corner is designed for
             performance, every detail optimized for excellence.
           </p>
